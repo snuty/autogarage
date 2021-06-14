@@ -1,0 +1,134 @@
+background{ url("background.png") 
+no-repeat fixed center; 
+
+} 
+
+#scherm1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:14px;
+  position: absolute;
+  height:64%;
+  width:50%;
+  left: 25px;
+  top: 25px;
+    border-radius: 50px 0px 00px 0px;
+    background-color: #ee7a34;
+    color: rgb(0, 0, 0);
+  }
+  
+#scherm2 {
+  position: absolute;
+  height:64%;
+  width:33%;
+  left: 625px;
+  top: 25px;
+    border-radius: 00px 0px 50px 0px;
+    background-color:#5fa8ad;
+  
+}
+
+#button-container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:14px;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+}
+
+.grijs {
+  background-color: #b1aab0;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.paars {
+  background-color: #ca6aaa; 
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.groen {
+  background-color: #7fcaa1;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.geel {
+  background-color: #eff559;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+  #autovoorbeeld {
+    position:absolute;
+    height:150%;
+    width:150%;
+    left: -60px;
+    top: -80px;
+    background-color:transparent;
+  }
+  #change-image {
+    height:100%;
+    width:5%;
+    left: 45px;
+    top: 193px;
+    background-color: transparent;
+  }
+  #wiel2 {
+    height:100%;
+    width:6%;
+    left: 45px;
+    top: 200px;
+    background-color: transparent;
+  }
+
+  #wiel21 {
+    height:100%;
+    width:6%;
+    left: 130px;
+    top: 129px;
+    background-color: transparent;
+  }
+
+  #wiel22 {
+    height:100%;
+    width:6%;
+    left: 215px;
+    top: 57px;
+    background-color: transparent;
+  }
+
+  #wiel23 {
+    height:100%;
+    width:6%;
+    left: 298px;
+    top: -14px;
+    background-color: transparent;
+  }
+
+  #wiel3 {
+    height:0px;
+    width:0px;
+    left: 240px;
+    top: 75px;
+    background-color: transparent;
+    
+  }
+
+  .responsive {
+    max-width: 100%;
+    height: auto;
+  }
