@@ -1,31 +1,64 @@
-background{ url("background.png") 
+body {
+background: url("background.jpg") 
 no-repeat fixed center; 
 
-} 
-
-#scherm1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size:14px;
-  position: absolute;
-  height:64%;
-  width:50%;
-  left: 25px;
-  top: 25px;
-    border-radius: 50px 0px 00px 0px;
-    background-color: #ee7a34;
-    color: rgb(0, 0, 0);
+}  
+  
+  /* Create two unequal columns that floats next to each other */
+  .column {
+    width:70%;
+    float: left;
   }
   
-#scherm2 {
-  position: absolute;
-  height:64%;
-  width:33%;
-  left: 625px;
-  top: 25px;
-    border-radius: 00px 0px 50px 0px;
-    background-color:#5fa8ad;
+  .left {
+    width: 33%;
+    background-color: transparent;
+    float:center;
+    padding-left: 30px;
+    padding-right: 0px;
+    padding-top: 60px;
+    padding-bottom: 0px;
+      }
   
-}
+  .right {
+    width: 10%;
+    background-color: transparent; 
+    float:center;
+    padding-left: 40px;
+    padding-right: 0px;
+    padding-top: 58px;
+    padding-bottom: 0%;
+  }
+
+  .keuzemenu {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:14px;
+    position: absolute;
+    left: 75px;
+    top: 250px;
+      background-color: orange;
+      color: rgb(0, 0, 0);
+  }
+
+  .autovoorbeeld {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:14px;
+    position: absolute;
+    left: 700px;
+    top: 200px;
+      background-color: transparent;
+      color: rgb(0, 0, 0);
+  }
+  
+  .schaduw {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:14px;
+    position: absolute;
+    left: 700px;
+    top: 375px;
+      background-color: transparent;
+      color: rgb(0, 0, 0);
+  }
 
 #button-container {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
