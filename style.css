@@ -66,14 +66,12 @@ background-size: cover;
 
   .schaduw {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    display: block!important;
-    margin-left: auto!important;
-    margin-right: auto!important;
-    width: 50%;
-    padding-top: 200px;
+    font-size:14px;
+    position: absolute;
+    left: 700px;
+    top: 375px;
+      background-color: transparent;
+      color: rgb(0, 0, 0);
   }
 
 .back{
