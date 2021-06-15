@@ -36,7 +36,7 @@ no-repeat fixed center;
     position: absolute;
     left: 75px;
     top: 250px;
-      background-color: orange;
+      background-color: transparent;
       color: rgb(0, 0, 0);
   }
 
@@ -50,6 +50,18 @@ no-repeat fixed center;
       color: rgb(0, 0, 0);
   }
   
+ #drophere {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:14px;
+    position: absolute;
+    left: 600px;
+    top: 100px;
+      background-color: transparent;
+      color: rgb(0, 0, 0);
+      width:600px;
+      height:600px;
+  }
+
   .schaduw {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:14px;
@@ -60,106 +72,27 @@ no-repeat fixed center;
       color: rgb(0, 0, 0);
   }
 
-#button-container {
+.back{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size:14px;
   position: absolute;
-  left: 50px;
-  top: 50px;
+  left: 40px;
+  top: 330px;
     background-color: transparent;
     color: rgb(0, 0, 0);
+    border:0px;
 }
 
-.grijs {
-  background-color: #b1aab0;
-  border: none;
-  padding: 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 15px;
+.next {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:14px;
+  position: absolute;
+  left: 270px;
+  top: 330px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border:0px;
 }
-.paars {
-  background-color: #ca6aaa; 
-  border: none;
-  padding: 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 15px;
-}
-
-.groen {
-  background-color: #7fcaa1;
-  border: none;
-  padding: 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 15px;
-}
-
-.geel {
-  background-color: #eff559;
-  border: none;
-  padding: 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 15px;
-}
-
-  #autovoorbeeld {
-    position:absolute;
-    height:150%;
-    width:150%;
-    left: -60px;
-    top: -80px;
-    background-color:transparent;
-  }
-  #change-image {
-    height:100%;
-    width:5%;
-    left: 45px;
-    top: 193px;
-    background-color: transparent;
-  }
-  #wiel2 {
-    height:100%;
-    width:6%;
-    left: 45px;
-    top: 200px;
-    background-color: transparent;
-  }
-
-  #wiel21 {
-    height:100%;
-    width:6%;
-    left: 130px;
-    top: 129px;
-    background-color: transparent;
-  }
-
-  #wiel22 {
-    height:100%;
-    width:6%;
-    left: 215px;
-    top: 57px;
-    background-color: transparent;
-  }
-
-  #wiel23 {
-    height:100%;
-    width:6%;
-    left: 298px;
-    top: -14px;
-    background-color: transparent;
-  }
-
-  #wiel3 {
-    height:0px;
-    width:0px;
-    left: 240px;
-    top: 75px;
-    background-color: transparent;
-    
-  }
 
   .responsive {
     max-width: 100%;

@@ -9,58 +9,101 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
+
+$(document).ready(function() {
+  var dragOpts = {
+    helper: 'clone',
+    zIndex: 10
+  },
+      dropOpts = {
+        tolerance: 'fit',
+        drop: function(e, ui) {
+          if(ui.draggable.hasClass('img-source')) {
+            var cloneImg = ui.draggable.clone(),
+                cloneDragOpts = {
+                  containment: 'parent'
+                };
+            cloneImg.removeAttr('id');
+            cloneImg.removeClass();
+            cloneImg.css({
+              position: 'absolute',
+              top: ui.offset.top - $(this).offset().top,
+              left: ui.offset.left - $(this).offset().left
+            }).draggable(cloneDragOpts);
+            $(this).append(cloneImg);
+          }
+        }
+      };
   
-  jQuery(document).ready(function($){
+  $('#bovenkant img').each(function(index) {
+    $(this).draggable(dragOpts);
+  });
 
-$('.grijs').on({
-'click': function(){
-$('#change-image').attr('src','wiel2.png');
-}
-});
+  $('#voorkant img').each(function(index) {
+    $(this).draggable(dragOpts);
+  });
 
-$('.paars').on({
-'click': function(){
-$('#change-image').attr('src','wiel21.png');
-}
-});
+  $('#zijkant img').each(function(index) {
+    $(this).draggable(dragOpts);
+  });
 
-$('.groen').on({
-'click': function(){
-$('#change-image').attr('src','wiel22.png');
-}
-});
+  $('#raamlinks img').each(function(index) {
+    $(this).draggable(dragOpts);
+  });
 
-$('.geel').on({
-'click': function(){
-$('#change-image').attr('src','wiel23.png');
-}
-});
+  $('#raamrechts img').each(function(index) {
+    $(this).draggable(dragOpts);
+  });
 
-  $( function() {
-    $( "#change-image" ).draggable();
-  } );
+  $('#koplampen img').each(function(index) {
+    $(this).draggable(dragOpts);
+  });
 
-  $( function() {
-    $( "#wiel2" ).draggable();
-  } );
+  $('#wiel1 img').each(function(index) {
+    $(this).draggable(dragOpts);
+  });
 
-  $( function() {
-    $( "#wiel21" ).draggable();
-  } );
-
-  $( function() {
-    $( "#wiel22" ).draggable();
-  } );
-
-  $( function() {
-    $( "#wiel23" ).draggable();
-  } );
-
-  $( function() {
-    $( "#wiel3" ).draggable();
-  } );
+  $('#wiel2 img').each(function(index) {
+    $(this).draggable(dragOpts);
+  });
   
+  $('#drophere').droppable(dropOpts);
+}); 
+
+
+$(function() {
+    $('.next').on('click', function() {
+        $('.keuzemenu>div').each(function() {
+            var id = $(this).index();
+            if ($(this).is(':visible')) {
+                $(this).hide();
+                if (id == $('.keuzemenu>div').length - 1) {
+                    $('.keuzemenu>div').eq(0).show();
+                } else {
+                    $('.keuzemenu>div').eq(id + 1).show();
+                }
+                return false;
+            }
+        });
+    });
 });
+
+$(function() {
+    $('.back').on('click', function() {
+        $('.keuzemenu>div').each(function() {
+            var id = $(this).index();
+            if ($(this).is(':visible')) {
+                $(this).hide();
+                if (id == $('.keuzemenu>div').length - 8) {
+                    $('.keuzemenu>div').eq(0).show();
+                } else {
+                    $('.keuzemenu>div').eq(id - 1).show();
+                }
+                return false;
+            }
+        });
+    });
+})
 
   </script>
 </head>
@@ -75,10 +118,90 @@ $('#change-image').attr('src','wiel23.png');
         </div>
       </div>
 
-      <div class="keuzemenu">testos hoi</div>
       <div class="schaduw"><img src="schaduw.png"></div>
       <div class="autovoorbeeld"><img src="autovoorbeeld.png"></div>
+      <div id="drophere"></div>
+      <div class="keuzemenu">
 
+        <div id="wiel1">
+            <img id="img1" class="img-source" src="wiel1.png">
+            <img id="img1" class="img-source" src="wiel12.png">
+            <img id="img1" class="img-source" src="wiel13.png">
+            <img id="img1" class="img-source" src="wiel14.png"><br>
+            <img id="img1" class="img-source" src="wiel15.png">
+            <img id="img1" class="img-source" src="wiel16.png">
+            <img id="img1" class="img-source" src="wiel17.png">
+            <img id="img1" class="img-source" src="wiel18.png"><br>
+            <img id="img1" class="img-source" src="wiel19.png">
+            <img id="img1" class="img-source" src="wiel110.png">
+            <img id="img1" class="img-source" src="wiel112.png">
+        </div>
+
+        <div id="bovenkant" style="display:none;">
+            <img id="img1" class="img-source" src="bovenkant.png" ><br>
+            <img id="img2" class="img-source" src="bovenkant2.png"><br>
+            <img id="img3" class="img-source" src="bovenkant3.png"><br>
+        </div>
+
+        <div id="raamlinks" style="display: none;">
+            <img id="img1" class="img-source" src="raamlinks.png">
+            <img id="img2" class="img-source" src="raamlinks2.png">
+            <img id="img3" class="img-source" src="raamlinks3.png"><br>
+            <img id="img4" class="img-source" src="raamlinks4.png">
+            <img id="img3" class="img-source" src="raamlinks5.png">
+            <img id="img4" class="img-source" src="raamlinks6.png"><br>
+        </div>
+        <div id="raamrechts" style="display: none;">
+            <img id="img1" class="img-source" src="raamrechts.png">
+            <img id="img2" class="img-source" src="raamrechts2.png">
+            <img id="img3" class="img-source" src="raamrechts3.png"><br>
+            <img id="img4" class="img-source" src="raamrechts4.png">
+            <img id="img3" class="img-source" src="raamrechts5.png">
+            <img id="img4" class="img-source" src="raamrechts6.png"><br>
+       </div>
+
+        <div id="voorkant" style="display: none;"> 
+            <img id="img1" class="img-source" src="voorkant.png">
+            <img id="img2" class="img-source" src="voorkant2.png"><br>
+            <img id="img3" class="img-source" src="voorkant3.png">
+            <img id="img4" class="img-source" src="voorkant4.png"><br>
+            <img id="img3" class="img-source" src="voorkant5.png">
+            <img id="img4" class="img-source" src="voorkant6.png">
+        </div>
+        <div id="zijkant" style="display: none;">
+            <img id="img1" class="img-source" src="zijkant.png" ><br>
+            <img id="img2" class="img-source" src="zijkant2.png"><br>
+            <img id="img3" class="img-source" src="zijkant3.png"><br>
+        </div>
+
+        <div id="koplampen" style="display: none;">
+            <img id="img1" class="img-source" src="koplamp1.png">
+            <img id="img1" class="img-source" src="koplamp2.png">
+            <img id="img1" class="img-source" src="koplamp3.png">
+            <img id="img1" class="img-source" src="koplamp4.png">
+            <img id="img1" class="img-source" src="koplamp5.png">
+            <img id="img1" class="img-source" src="koplamp6.png">
+        </div>
+
+        <div id="wiel2" style="display: none;">
+            <img id="img1" class="img-source" src="wiel2.png">
+            <img id="img1" class="img-source" src="wiel21.png">
+            <img id="img1" class="img-source" src="wiel22.png">
+            <img id="img1" class="img-source" src="wiel23.png"><br>
+            <img id="img1" class="img-source" src="wiel24.png">
+            <img id="img1" class="img-source" src="wiel25.png">
+            <img id="img1" class="img-source" src="wiel26.png">
+            <img id="img1" class="img-source" src="wiel27.png"><br>
+            <img id="img1" class="img-source" src="wiel28.png">
+            <img id="img1" class="img-source" src="wiel29.png">
+            <img id="img1" class="img-source" src="wiel210.png">
+            <img id="img1" class="img-source" src="wiel211.png">
+        </div>
+
+        <button class="back"><img src="links.png"></button>
+        <button class="next"><img src="rechts.png"></button>
+      </div>
+    </div>
 
 </body>
 </html>
